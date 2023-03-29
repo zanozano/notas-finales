@@ -1,3 +1,5 @@
+
+
 var studentName = prompt('Cual es tu nombre?', 'Ingresa tu nombre');
 var studentSurname = prompt('Cual es tu apellido?', 'Ingresa tu apellido');
 var studentCareer = prompt('Cual es tu carrera?', 'Ingresa tu carrera');
@@ -20,7 +22,9 @@ var averageHtml = (markHtml_1 + markHtml_2 + markHtml_3) / 3;
 
 var averageCss = (markCss_1 + markCss_2 + markCss_3) / 3;
 
-//var averageJavaScript = (markJavaScript_1 + markJavaScript_2) / 3;
+var averageJavaScript = (markJavaScript_1 + markJavaScript_2) / 2;
+
+var needGrade = (averageJavaScript * 2) / 4
 
 // CONTENEDOR PRINCIPAL
 document.write("<div class='container my-4'>");
@@ -109,5 +113,4 @@ document.getElementById('averageCss').innerHTML = averageCss.toFixed(1);
 document.getElementById('averageJavaScript').innerHTML = '-';
 
 // TEXTO POR DEFECTO DE ACUERDO A LA NOTA
-document.getElementById('alert').innerHTML =
-	'Para aprobar el ramo ' + subject3 + ', necesitas obtener un 4 en el promedio.';
+document.getElementById('alert').innerHTML = 'Para aprobar el ramo ' + subject3 + ', necesitas obtener un ' + Math.round(needGrade) + ' en el promedio.';
